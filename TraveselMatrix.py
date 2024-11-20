@@ -6,10 +6,6 @@ nums = [i for i in range(1, m * n + 1)]
 
 matrix = [[0] * m for i in range(n)]
 
-print(nums)
-# for each_row in matrix:
-#     print(each_row)
-
 if m == n and m % 2 == 1:
     matrix[n // 2][m // 2] = nums[-1]
 indx = 0

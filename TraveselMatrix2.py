@@ -39,11 +39,3 @@ while i < n and j < n:
         j += 1
 
 print(pd.DataFrame(matrix))
-#
-# for each_row in matrix:
-#     for num in each_row:
-#         if num < 10:
-#             print('0' + str(num), end=' ')
-#         else:
-#             print(num, end=' ')
-#     print()
