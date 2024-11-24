@@ -1,7 +1,21 @@
+import pandas as pd
+
+def calculate_column(limit: int, row: int):
+    count = 0
+    result = 0
+    while count < limit:
+        result += 1
+        if result % (row - 1) == 1:
+            count += row
+        else:
+            count += 1
+    return result
+
+
 def N_travesel(limit: int, row : int):
     nums = [i + 1 for i in range(limit)]
     matrix = list()
-    column = limit // row + row
+    column = calculate_column(limit, row)
     for _ in range(row):
         matrix.append([0 for i in range(column)])
 
@@ -26,7 +40,6 @@ def N_travesel(limit: int, row : int):
                 i -= 1
                 j += 1
 
-    for eachrow in matrix:
-        print(eachrow)
+    print(pd.DataFrame(matrix))
 
-N_travesel(16, 4)
+N_travesel(16, 5)
