@@ -3,7 +3,7 @@ import random
 import time
 
 alphabet = string.ascii_letters + " "
-target = 'Hello world'
+target = 'Hello World'
 result = str()
 
 for char in target:

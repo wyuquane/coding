@@ -1,3 +1,5 @@
+'''https://www.hackerrank.com/challenges/two-characters/problem'''
+
 s = input()
 chars_in_s = list(set(s))
 print(chars_in_s)

@@ -10,4 +10,5 @@ def eratosthenes(limit: int):
             primes.append(j)
     return primes
 
-print(eratosthenes(31))
+if __name__ == '__main__':
+    print(eratosthenes(31))

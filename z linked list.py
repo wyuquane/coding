@@ -53,42 +53,44 @@ linked2.display()
 cur1 = linked1.head
 cur2 = linked2.head
 
-# result = SingleLinkedList()
-#
-# while cur1 is not None or cur2 is not None:
-#     if cur1 is None:
-#         while cur2:
-#             result.add_end(cur2.data)
-#             cur2 = cur2.next
-#         break
-#     if cur2 is None:
-#         while cur2:
-#             result.add_end(cur1.data)
-#             cur1 = cur1.next
-#         break
-#     if cur1.data < cur2.data:
-#         result.add_end(cur1.data)
-#         cur1 = cur1.next
-#     else:
-#         result.add_end(cur2.data)
-#         cur2 = cur2.next
+result = SingleLinkedList()
 
-if cur1.data <= cur2.data: # lay cur1 lam chu, bien doi cur1
-    # cur1 = cur1.next
-    while cur1.next is not None or cur2 is not None:
-        if cur2 is None:
-            while cur1.next:
-                cur1 = cur1.next
-        if cur1.next is None:
-            cur1.next = cur2
-            break
-        if cur1.next.data <= cur2.data:
-            cur1 = cur1.next
-        else:
-            temp = cur2
+while cur1 is not None or cur2 is not None:
+    if cur1 is None:
+        while cur2:
+            result.add_end(cur2.data)
             cur2 = cur2.next
-            cur1.next = temp
-            temp.next = cur1.next.next
+        break
+    if cur2 is None:
+        while cur2:
+            result.add_end(cur1.data)
             cur1 = cur1.next
-        linked1.display()
+        break
+    if cur1.data < cur2.data:
+        result.add_end(cur1.data)
+        cur1 = cur1.next
+    else:
+        result.add_end(cur2.data)
+        cur2 = cur2.next
+
+result.display()
+
+# if cur1.data <= cur2.data: # lay cur1 lam chu, bien doi cur1
+#     # cur1 = cur1.next
+#     while cur1.next is not None or cur2 is not None:
+#         if cur2 is None:
+#             while cur1.next:
+#                 cur1 = cur1.next
+#         if cur1.next is None:
+#             cur1.next = cur2
+#             break
+#         if cur1.next.data <= cur2.data:
+#             cur1 = cur1.next
+#         else:
+#             temp = cur2
+#             cur2 = cur2.next
+#             cur1.next = temp
+#             temp.next = cur1.next.next
+#             cur1 = cur1.next
+#         linked1.display()
 

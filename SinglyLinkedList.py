@@ -98,6 +98,24 @@ class SinglyLinkedList:
             current = current.next
         return -1
 
+    def reverse_llist(self):
+        '''reverse linked list without creat new one'''
+        if self.head is None:
+            return
+        if self.head.next is None:
+            return
+        before = None
+        cur = self.head
+        after = self.head.next
+        while after is not None:
+            cur.next = before
+            before = cur
+            cur = after
+            after = after.next
+        cur.next = before
+        self.head = cur
+        return self
+
 def merge_llist(llist1: SinglyLinkedList, llist2: SinglyLinkedList) -> SinglyLinkedList:
     cur1 = llist1.head
     cur2 = llist2.head
@@ -133,7 +151,11 @@ def checkprime(n: int):
 if __name__ == "__main__":
     ll1 = SinglyLinkedList()
     ll2 = SinglyLinkedList()
-    ll1.append_list([1, 3, 5, 5, 6, 8])
+    ll1.append_list([1, 3, 5, 7, 6, 8])
     ll2.append_list([2, 5, 6, 8, 9])
-    ll3 = merge_llist(ll1, ll2)
-    ll3.display()
+    a = ll2.head
+    b = ll2.head
+    while b.next is not None and b.next.next is not None:
+        a = a.next
+        b = b.next.next
+    print(a.data)
