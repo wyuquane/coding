@@ -1,4 +1,4 @@
-import pandas as pd
+import numpy as np
 
 m = int(input()) # num of column
 n = int(input()) # num of row
@@ -29,4 +29,4 @@ for i in range((n + 1) // 2):
         indx += 1
 
 
-print(pd.DataFrame(matrix))
+print(np.array(matrix))

@@ -1,4 +1,4 @@
-import pandas as pd
+import numpy as np
 
 n = int(input())
 
@@ -38,4 +38,4 @@ while i < n and j < n:
         i -= 1
         j += 1
 
-print(pd.DataFrame(matrix))
+print(np.array(matrix))

@@ -1,4 +1,4 @@
-import pandas as pd
+import numpy as np
 
 def calculate_column(limit: int, row: int):
     count = 0
@@ -40,6 +40,6 @@ def N_travesel(limit: int, row : int):
                 i -= 1
                 j += 1
 
-    print(pd.DataFrame(matrix))
+    print(np.array(matrix))
 
 N_travesel(16, 5)

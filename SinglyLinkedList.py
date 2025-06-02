@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
     def __str__(self):
-        return f'{self.data}'
+        return f'{self.data} -> '
 
 
 class SinglyLinkedList:

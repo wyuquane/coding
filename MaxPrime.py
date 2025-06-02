@@ -2,11 +2,11 @@ def prime(num: int):
     if num <= 1:
         return False
     else:
-        boo = True
         for i in range(2, int(num ** 0.5) + 1):
             if num % i == 0:
-                boo = False
-        return boo
+                return False
+        return True
+
 arr = list(map(int, input().split()))
 primes = list()
 for num in arr:
